@@ -3,7 +3,7 @@ import axios from 'axios'
 const userActions ={
     signIn:(user) =>{
         return async (dispatch, getState) =>{
-            const response = await axios.post('http://localhost:4000/api/user/signin', user)
+            const response = await axios.post('https://organizateunpoco.herokuapp.com/api/user/signin', user)
 
             if(!response.data.success){
                 return response.data
@@ -16,7 +16,7 @@ const userActions ={
     },
     signUp:(user) =>{
         return async (dispatch, getState) =>{
-            const response = await axios.post('http://localhost:4000/api/user/signup', user)
+            const response = await axios.post('https://organizateunpoco.herokuapp.com/api/user/signup', user)
             if(response.data.success){
                 dispatch({
                     type: 'USER_LOG',
@@ -35,7 +35,7 @@ const userActions ={
     },
     preserve: (token) =>{
         return async (dispatch, getState) =>{
-            const response = await axios.post('http://localhost:4000/api/user/preserve', {token},{
+            const response = await axios.post('https://organizateunpoco.herokuapp.com/api/user/preserve', {token},{
                 headers:{
                     Authorization: 'Bearer ' + token
                 }

@@ -4,7 +4,7 @@ const taskActions = {
     getTasks: ()=>{
         return async (dispatch, getState) =>{
             try {
-                const response = await axios.get('http://localhost:4000/api/tasks')
+                const response = await axios.get('https://organizateunpoco.herokuapp.com/api/tasks')
                 dispatch({
                     type: 'GET_TASKS',
                     payload: response.data.response
@@ -17,7 +17,7 @@ const taskActions = {
     postTask: (task) =>{
         return async (dispatch, getState) =>{
             try {
-                const response = await axios.post('http://localhost:4000/api/tasks', task)
+                const response = await axios.post('https://organizateunpoco.herokuapp.com/api/tasks', task)
                 dispatch({
                     type: 'POST_TASK',
                     payload: response.data.response
@@ -30,7 +30,7 @@ const taskActions = {
     deleteTask:(id) =>{
         return async (dispatch, getState) =>{
             try {
-         await axios.delete('http://localhost:4000/api/task/'+ id)
+         await axios.delete('https://organizateunpoco.herokuapp.com/api/task/'+ id)
                 dispatch({
                     type: 'DELETE_TASK',
                     payload: id
@@ -45,7 +45,7 @@ const taskActions = {
         
         return async (dispatch, getState) =>{
             try {
-                const response = await axios.post('http://localhost:4000/api/task/'+ id)
+                const response = await axios.post('https://organizateunpoco.herokuapp.com/api/task/'+ id)
                 dispatch({
                     type:'TASK_STATUS',
                     payload: response.data.response
