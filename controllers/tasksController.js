@@ -46,7 +46,6 @@ const taskController = {
     },
     taskStatus: (req,res) =>{
         const {id} = req.params
-        console.log(id)
         Task.findOneAndUpdate({_id: id},
             {$set:{done: true }},
             {new:true}).populate('userId')

@@ -61,7 +61,6 @@ const userController ={
         })
     },
     preserveLog: (req, res) =>{
-        console.log(req.user)
         const {token} = req.body
         const {firstName, lastName, email, picUrl, _id} = req.user
         res.json({

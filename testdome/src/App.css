@@ -43,15 +43,14 @@ header{
 }
 .bigContainer{
   display: flex;
-  width: 90vw;
+  width: 95vw;
   justify-content: space-between;
   margin:  0 auto;
   flex-wrap: wrap;
 }
 .container{
-  width: 40vw;
+  width: 38vw;
   min-width: 300px;
-  /* margin: 3vh auto; */
   flex: 2;
   background-color: rgba(206, 206, 206, 0.527);
   padding: 3vh;
@@ -92,9 +91,9 @@ header{
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
-  flex: 3;
+  flex: 4;
   color: whitesmoke;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .taskContainer{
   background-color: rgb(97, 4, 4);
@@ -204,7 +203,7 @@ textarea{
   text-align: center;
 }
 
-@media (max-width: 600px){
+@media (max-width: 730px){
   .register{
     flex-direction: column-reverse;
     height: 100vh;
@@ -217,6 +216,11 @@ textarea{
   
   .bigContainer{
     align-items: center;
+    flex-direction: column;
+    width: 90%;
+  }
+  .container{
+    width: 90%;
   }
   .sendBtn{
     width: 100%;
@@ -227,7 +231,7 @@ textarea{
     justify-content: center;
     flex-direction: column;
     margin: 3vh 0;
-    
+    width: 90%;
   }
   .taskContainer{
     width: 100%;

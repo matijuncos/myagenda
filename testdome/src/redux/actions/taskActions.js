@@ -22,7 +22,6 @@ const taskActions = {
                     type: 'POST_TASK',
                     payload: response.data.response
                 })
-                console.log(response)
             } catch (error) {
                 console.log(error)
             }
@@ -47,7 +46,6 @@ const taskActions = {
         return async (dispatch, getState) =>{
             try {
                 const response = await axios.post('http://localhost:4000/api/task/'+ id)
-                console.log(response.data)
                 dispatch({
                     type:'TASK_STATUS',
                     payload: response.data.response
