@@ -69,7 +69,7 @@ const List = ({getTasks, allTasks, postTask, deleteTask, updateTask, loggedUser}
                     <h2>Agrega una nueva</h2>
                     </div>
                 )}
-                {sortedByDate.map((task, idx) =>{
+                {allTasks.length !== 0 && sortedByDate.map((task, idx) =>{
                     if(loggedUser.email === task.userId.email){
                         return (
                             <Task     
